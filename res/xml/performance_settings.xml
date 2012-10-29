@@ -11,6 +11,12 @@
                 android:targetClass="com.cyanogenmod.cmparts.activities.CPUActivity" />
         </PreferenceScreen>
 
+<!--        <PreferenceScreen android:key="usb_fastcharge" android:title="@string/pref_enable_fastcharge_title" android:summary="@string/pref_enable_fastcharge_summary">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.cyanogenmod.cmparts"
+                android:targetClass="com.cyanogenmod.cmparts.activities.USBFastcharge" />
+        </PreferenceScreen>  -->
+
         <ListPreference android:key="pref_compcache_size"
             android:dialogTitle="@string/pref_compcache_title"
             android:title="@string/pref_compcache_title"

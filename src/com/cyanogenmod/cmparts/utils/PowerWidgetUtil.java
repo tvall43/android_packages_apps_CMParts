@@ -38,6 +38,7 @@ public class PowerWidgetUtil {
     public static final String BUTTON_BLUETOOTH = "toggleBluetooth";
     public static final String BUTTON_BRIGHTNESS = "toggleBrightness";
     public static final String BUTTON_SOUND = "toggleSound";
+    public static final String BUTTON_FCHARGE = "toggleFCharge";
     public static final String BUTTON_SYNC = "toggleSync";
     public static final String BUTTON_WIFIAP = "toggleWifiAp";
     public static final String BUTTON_SCREENTIMEOUT = "toggleScreenTimeout";
@@ -79,6 +80,8 @@ public class PowerWidgetUtil {
                 BUTTON_SLEEP, R.string.title_toggle_sleep, "com.android.systemui:drawable/stat_sleep"));
         BUTTONS.put(BUTTON_SOUND, new PowerWidgetUtil.ButtonInfo(
                 BUTTON_SOUND, R.string.title_toggle_sound, "com.android.systemui:drawable/stat_ring_on"));
+        BUTTONS.put(BUTTON_FCHARGE, new PowerWidgetUtil.ButtonInfo(
+                BUTTON_FCHARGE, R.string.title_toggle_fcharge, "com.android.systemui:drawable/stat_fcharge_on"));
         BUTTONS.put(BUTTON_SYNC, new PowerWidgetUtil.ButtonInfo(
                 BUTTON_SYNC, R.string.title_toggle_sync, "com.android.systemui:drawable/stat_sync_on"));
         BUTTONS.put(BUTTON_WIFI, new PowerWidgetUtil.ButtonInfo(
@@ -99,7 +102,8 @@ public class PowerWidgetUtil {
     private static final String BUTTONS_DEFAULT = BUTTON_WIFI
                              + BUTTON_DELIMITER + BUTTON_BLUETOOTH
                              + BUTTON_DELIMITER + BUTTON_GPS
-                             + BUTTON_DELIMITER + BUTTON_SOUND;
+                             + BUTTON_DELIMITER + BUTTON_SOUND
+                             + BUTTON_DELIMITER + BUTTON_FCHARGE;
 
     public static String getCurrentButtons(Context context) {
         String buttons = Settings.System.getString(context.getContentResolver(), Settings.System.WIDGET_BUTTONS);
